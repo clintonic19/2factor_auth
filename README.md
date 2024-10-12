@@ -1,4 +1,4 @@
-##Multi-Factor Authentication (MFA)
+## Multi-Factor Authentication (MFA)
 
 This document provides a step-by-step guide for implementing Multi-Factor Authentication (MFA) using Time-Based One-Time Passwords (TOTP) in a web application. 
 
