@@ -2,7 +2,7 @@
 
 This document provides a step-by-step guide for implementing Multi-Factor Authentication (MFA) using Time-Based One-Time Passwords (TOTP) in a web application. 
 
-#The implementation includes the following features:
+# The implementation includes the following features:
 - User registration   - POST REQUEST
 - User login          - POST REQUEST
 - User logout         - POST REQUEST
@@ -11,7 +11,7 @@ This document provides a step-by-step guide for implementing Multi-Factor Authen
 - Verifying the Time-Based Token (TOTP) - POST REQUEST
 - Resetting the TOTP token  - POST REQUEST
 
-##Language
+# Language
 - Backend Framework: Node.js 
 - Database: MongoDB,
 - Authentication:  jsonwebtoken for session management
