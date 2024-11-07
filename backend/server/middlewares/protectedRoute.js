@@ -7,5 +7,4 @@ const protected = (req, res, next) => {
     }
     res.status(401).json({ error: 'Please Login to access this route' });
 }
-
 module.exports = { protected };

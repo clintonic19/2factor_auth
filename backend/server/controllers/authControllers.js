@@ -5,7 +5,6 @@ const speakeasy = require('speakeasy');
 const qrCode = require('qrcode');
 const jwt = require('jsonwebtoken');
 
-
 // REGISTER USER AUTH
 const registerUser = async(req, res) => {
     try {
@@ -26,7 +25,6 @@ const registerUser = async(req, res) => {
     }
 }
 
-
 //LOGIN FUNCTION
 const loginUser = async(req, res) => {
     try {
@@ -39,9 +37,8 @@ const loginUser = async(req, res) => {
         res.status(500).json({ error: 'Unable to Login User', message: error.message})   
     }       
     }
-  
 
-// LOGOUT USER FUNCTION
+    // LOGOUT USER FUNCTION
 const logoutUser = async(req, res) => {
     try {
         if(!req.user)
@@ -137,6 +134,15 @@ const reset2fa = async(req, res) => {
         res.status(500).json({ error: 'Error Setting up 2FA Reset', message: error.message})       
     }
 };
+
+const logout = async(req, res)=>{
+    try {
+        req.logout();
+        res.status(200).json({ message: 'User Logged Out Successfully' });
+    } catch (error) {
+        res.status(500).json({ error: 'Error Logging out User', message: error.message})
+    }
+}
 
 module.exports = {
     registerUser, loginUser, logoutUser, userStatus, setup2fa, verify2fa, reset2fa 
